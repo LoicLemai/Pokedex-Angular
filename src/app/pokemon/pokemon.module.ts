@@ -5,10 +5,10 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
 import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { Routes, RouterModule } from '@angular/router';
+import { PokemonService } from './pokemon.service';
 
 const pokemonRoutes: Routes = [
   { path: 'pokemons', component: ListPokemonComponent},
-  { path: '', redirectTo:'pokemons', pathMatch: 'full'},
   { path: 'pokemons/:id', component: DetailPokemonComponent},
 ]; 
 
@@ -23,6 +23,7 @@ const pokemonRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(pokemonRoutes)
-  ]
+  ],
+  providers:[PokemonService]
 })
 export class PokemonModule { }
