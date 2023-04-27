@@ -4,11 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-page-not-found',
   template: `
     <div class='center'>
-      <h1>404 : hallah not found</h1>
-      <p> nan je dec il existe pas le boug<p>
+      <h1>error 404: not found</h1>
       
       <a routerLink="/pokemons" class="waves-effect waves-teal btn-flat">
-        Retourne d'ou tu viens
+        Retourner a l'accueil 
       </a>
     </div>
   `,
